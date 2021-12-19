@@ -1,0 +1,17 @@
+####{BSB GENERATED: NO EDIT
+FLG -ppx /Users/poomthiti/Desktop/rescript-react-subscription/node_modules/@reasonml-community/graphql-ppx/ppx
+FLG -ppx '/Users/poomthiti/Desktop/rescript-react-subscription/node_modules/rescript/darwin/bsc.exe -as-ppx -bs-jsx 3'
+S /Users/poomthiti/Desktop/rescript-react-subscription/node_modules/rescript/lib/ocaml
+B /Users/poomthiti/Desktop/rescript-react-subscription/node_modules/rescript/lib/ocaml
+FLG -w +a-4-9-20-40-41-42-50-61-102
+S /Users/poomthiti/Desktop/rescript-react-subscription/node_modules/@rescript/react/lib/ocaml
+B /Users/poomthiti/Desktop/rescript-react-subscription/node_modules/@rescript/react/lib/ocaml
+S /Users/poomthiti/Desktop/rescript-react-subscription/node_modules/@reasonml-community/graphql-ppx/lib/ocaml
+B /Users/poomthiti/Desktop/rescript-react-subscription/node_modules/@reasonml-community/graphql-ppx/lib/ocaml
+S /Users/poomthiti/Desktop/rescript-react-subscription/node_modules/rescript-apollo-client/lib/ocaml
+B /Users/poomthiti/Desktop/rescript-react-subscription/node_modules/rescript-apollo-client/lib/ocaml
+S src
+B lib/bs/src
+S src/components
+B lib/bs/src/components
+####BSB GENERATED: NO EDIT}

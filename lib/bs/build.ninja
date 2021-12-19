@@ -1,0 +1,28 @@
+rescript = 1
+g_finger := /Users/poomthiti/Desktop/rescript-react-subscription/node_modules/@rescript/react/lib/ocaml/install.stamp
+g_finger := /Users/poomthiti/Desktop/rescript-react-subscription/node_modules/@reasonml-community/graphql-ppx/lib/ocaml/install.stamp
+g_finger := /Users/poomthiti/Desktop/rescript-react-subscription/node_modules/rescript-apollo-client/lib/ocaml/install.stamp
+rule astj
+  command = /Users/poomthiti/Desktop/rescript-react-subscription/node_modules/rescript/darwin/bsc.exe  -bs-v 9.1.4,1639917292.97 -ppx /Users/poomthiti/Desktop/rescript-react-subscription/node_modules/@reasonml-community/graphql-ppx/ppx -bs-jsx 3  -absname -bs-ast -o $out $i
+o src/App.ast : astj ../../src/App.res
+rule deps
+  command = /Users/poomthiti/Desktop/rescript-react-subscription/node_modules/rescript/darwin/bsb_helper.exe -hash d2ca11ce9aab8ff3d3541e4bd75da301 $in
+  restat = 1
+o src/App.d : deps src/App.ast
+rule mij
+  command = /Users/poomthiti/Desktop/rescript-react-subscription/node_modules/rescript/darwin/bsc.exe -I src/components -I src -I /Users/poomthiti/Desktop/rescript-react-subscription/node_modules/@rescript/react/lib/ocaml -I /Users/poomthiti/Desktop/rescript-react-subscription/node_modules/@reasonml-community/graphql-ppx/lib/ocaml -I /Users/poomthiti/Desktop/rescript-react-subscription/node_modules/rescript-apollo-client/lib/ocaml   -bs-package-name rescript-react-subscription -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
+  dyndep = 1
+  restat = 1
+o src/App.cmj src/App.cmi ../../src/App.bs.js : mij src/App.ast
+o src/Index.ast : astj ../../src/Index.res
+o src/Index.d : deps src/Index.ast
+o src/Index.cmj src/Index.cmi ../../src/Index.bs.js : mij src/Index.ast
+o src/Apollo.ast : astj ../../src/Apollo.res
+o src/Apollo.d : deps src/Apollo.ast
+o src/Apollo.cmj src/Apollo.cmi ../../src/Apollo.bs.js : mij src/Apollo.ast
+o src/components/Container.ast : astj ../../src/components/Container.res
+o src/components/Container.d : deps src/components/Container.ast
+o src/components/Container.cmj src/components/Container.cmi ../../src/components/Container.bs.js : mij src/components/Container.ast
+o src/components/ValidatorsTable.ast : astj ../../src/components/ValidatorsTable.res
+o src/components/ValidatorsTable.d : deps src/components/ValidatorsTable.ast
+o src/components/ValidatorsTable.cmj src/components/ValidatorsTable.cmi ../../src/components/ValidatorsTable.bs.js : mij src/components/ValidatorsTable.ast

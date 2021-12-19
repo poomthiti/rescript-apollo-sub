@@ -1,0 +1,26 @@
+rescript = 1
+rule cp
+  command = cp $i $out
+rule touch
+ command = touch $out
+o App.cmi : cp ../bs/src/App.cmi
+o App.cmj : cp ../bs/src/App.cmj
+o App.cmt : cp ../bs/src/App.cmt
+o App.res : cp ../../src/App.res
+o Index.cmi : cp ../bs/src/Index.cmi
+o Index.cmj : cp ../bs/src/Index.cmj
+o Index.cmt : cp ../bs/src/Index.cmt
+o Index.res : cp ../../src/Index.res
+o Apollo.cmi : cp ../bs/src/Apollo.cmi
+o Apollo.cmj : cp ../bs/src/Apollo.cmj
+o Apollo.cmt : cp ../bs/src/Apollo.cmt
+o Apollo.res : cp ../../src/Apollo.res
+o Container.cmi : cp ../bs/src/components/Container.cmi
+o Container.cmj : cp ../bs/src/components/Container.cmj
+o Container.cmt : cp ../bs/src/components/Container.cmt
+o Container.res : cp ../../src/components/Container.res
+o ValidatorsTable.cmi : cp ../bs/src/components/ValidatorsTable.cmi
+o ValidatorsTable.cmj : cp ../bs/src/components/ValidatorsTable.cmj
+o ValidatorsTable.cmt : cp ../bs/src/components/ValidatorsTable.cmt
+o ValidatorsTable.res : cp ../../src/components/ValidatorsTable.res
+build install.stamp : touch App.cmi App.cmj Index.cmi Index.cmj Apollo.cmi Apollo.cmj Container.cmi Container.cmj ValidatorsTable.cmi ValidatorsTable.cmj 
